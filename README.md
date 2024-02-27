@@ -1,4 +1,4 @@
-start the project: npm ru dev
+start the project: npm run dev
 open browser and type "localhost:8080 "
 select the excel file
 click on upoad 
