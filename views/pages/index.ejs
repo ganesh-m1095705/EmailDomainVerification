@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>EJS Is Fun</title>
+
+  <!-- CSS (load bootstrap from a CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+  <link type="text/css" rel="stylesheet" href="/styles/index.css" />
+</head>
+<body class="container">
+
+<header>
+  <h1 class="text-center">Email Varification</h1>
+</header>
+
+<main>
+  <div class="jumbotron">
+    <h3 class="pb-4 text-center">Upload Email Domain List</h3>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <div class="d-flex flex-column box">
+        <input type="file" id="excelFile" name="excelFile" accept=".xlsx, .xls"><br>
+        <input type="submit" value="Upload">
+        <h6 class="mt-4"><%= status %></h6>
+      </div>
+    </form>
+    <div class="options box">
+      <a href="/download-all" download="EmailDomainList.xlsx">
+        <button>Download All Data</button>
+      </a>
+      <a href="/download-final" download="finalList.xlsx">
+        <button>Download finalList</button>
+      </a>
+    </div>
+  </div>
+</main>
+
+</body>
+</html>
