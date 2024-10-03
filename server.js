@@ -36,7 +36,6 @@ app.post('/upload', upload.single('excelFile'), (req, res) => {
     const nonCheckedEmailData = getNonCheckedData(req.file.buffer).map(item => ({'Email Domain': item['Email Domain']}))
     console.log(nonCheckedEmailData, 'in line 37')
     const newEmailData = nonCheckedEmailData.filter(obj => !emailData.includes(obj['Email Domain'])).map(item => `pggetest@${item['Email Domain']}`)
-
     console.log(newEmailData, 'in line 40')
     console.log('Succesfuly featched Email Data')
 
